@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: ./server
+    ports:
+      - '80:80'
+    volumes:
+      - ./html:/var/www/html
+    tty: true
+    stdin_open: true

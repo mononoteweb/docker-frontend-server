@@ -1,0 +1,7 @@
+FROM centos/httpd
+MAINTAINER docker-frontend
+
+COPY ./vhosts.conf /etc/httpd/conf.d/vhosts.conf
+COPY ./00server.conf /etc/httpd/conf.d/00server.conf
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
